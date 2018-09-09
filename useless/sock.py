@@ -16,18 +16,14 @@ class remote:
 
     def recvline(self):
         buf = b''
-        while True:
-            data = self.recv(1)
-            buf += data
-            if data == b'\n':
-                break
+        while buf.find(b'\n') == -1:
+            buf += self.recv(1)
         return buf
 
     def recvuntil(self, serach_text):
         buf = b''
         while buf.find(serach_text) == -1:
-            data = self.recv(1)
-            buf += data
+            buf += self.recv(1)
         return buf
 
     def send(self, msg):

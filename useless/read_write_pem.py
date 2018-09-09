@@ -45,4 +45,15 @@ def write_pri(n, e, d, fpem="privateKey.pem"):
     key = RSA.construct((n,e,d))
     fout.write(key.exportKey())
 
+def write_pub(n, e, fpem="publicKey.pem"):
+    """
+        ARGS
+            n, e
+            fpem : output file (default is publicKey.pem)
+
+    """
+    fout = open(fpem, "wb")
+    key = RSA.construct((n,e))
+    fout.write(key.exportKey())
+
 
