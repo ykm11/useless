@@ -8,7 +8,8 @@ class remote:
 
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.client.connect((HOST, PORT))
-        print(f"\u001b[32m[+] HOST:{HOST}, PORT:{PORT} Connected\u001b[0m")
+        #print(f"\u001b[32m[+] HOST:{HOST}, PORT:{PORT} Connected\u001b[0m")
+        print("\u001b[32m[+] HOST:{0}, PORT:{1} Connected\u001b[0m".format(HOST, PORT))
 
     def recv(self, bytes_num=1024):
         return self.client.recv(bytes_num)
