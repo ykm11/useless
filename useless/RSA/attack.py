@@ -1,6 +1,13 @@
 from ..math import extgcd
 
 def common_modulus_attack(c1, c2, e1, e2, n):
+    """
+        ARGS :
+            c1, c2, e1, e2, n
+
+        RETURN :
+            m
+    """
 
     g, s, t = extgcd(e1, e2) # s*e1 + t*e2 = g
     assert s*e1 + t*e2 == g
