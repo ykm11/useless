@@ -42,6 +42,14 @@ def xor(x:bytes, y:bytes):
     return bytes([b0 ^ b1 for b0, b1 in zip(x, y)])
 
 def isqrt(n):
+    """
+        check whether arg_n is square number, or not.
+
+        RETURN :
+            if n is sq_num -> sqrt(n)
+            otherwise -> -1
+    """
+
     l = 0
     r = n
     while r - l > 1:
