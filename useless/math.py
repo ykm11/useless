@@ -40,3 +40,18 @@ def xor(x:bytes, y:bytes):
     if len(x) > len(y):
         y = (y*(len(x)//len(y)+1))[:len(x)]
     return bytes([b0 ^ b1 for b0, b1 in zip(x, y)])
+
+def isqrt(n):
+    l = 0
+    r = n
+    while r - l > 1:
+        m = (l + r) >> 1
+        if m**2 < n:
+            l = m
+        else:
+            r = m
+    
+    if r**2 == n:
+        return r
+    else:
+        return -1
