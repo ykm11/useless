@@ -32,9 +32,11 @@ def extgcd(m, n):
     assert m0*s0 + n0*t0 == m
     return m, s0, t0
 
-def xor(x:bytes, y:bytes):
+def xor(x, y):
     """
-         
+        ARGS:
+            x [bytes]
+            y [bytes]
     """
     assert len(x) != 0 and len(y) != 0
     if len(x) > len(y):
