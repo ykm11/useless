@@ -32,6 +32,12 @@ def extgcd(m, n):
     assert m0*s0 + n0*t0 == m
     return m, s0, t0
 
+def modinv(x, m):
+    g, s, t = extgcd(x, m)
+    if g != 1:
+        raise ValueError("inverse element does not exist over m")
+    return x % m
+
 def xor(x, y):
     """
         ARGS:
