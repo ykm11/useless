@@ -36,7 +36,7 @@ def modinv(x, m):
     g, s, t = extgcd(x, m)
     if g != 1:
         raise ValueError("inverse element does not exist over m")
-    return x % m
+    return s % m
 
 def xor(x, y):
     """
