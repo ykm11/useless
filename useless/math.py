@@ -83,4 +83,7 @@ def quadratic_equation_solver(a, b, c):
     
     x1 = (-b + D) // 2*a
     x2 = (-b - D) // 2*a
+
+    assert a*x1**2 + b*x1 + c == 0
+    assert a*x2**2 + b*x2 + c == 0
     return x1, x2
