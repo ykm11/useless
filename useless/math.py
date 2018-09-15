@@ -65,3 +65,22 @@ def isqrt(n):
         return r
     else:
         return -1
+
+def quadratic_equation_solver(a, b, c):
+    """
+        a*x^2 + b*x + c = 0
+
+        D = square_root(b^2 - 4ac) where D is square number
+        x = (-b + D) / 2*a, (-b - D) / 2*a
+
+        RETURN :
+            x
+    """
+
+    D = isqrt(b**2 - 4*a*c)
+    if D < 0:
+        raise ValueError("D is not square number")
+    
+    x1 = (-b + D) // 2*a
+    x2 = (-b - D) // 2*a
+    return x1, x2
