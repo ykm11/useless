@@ -7,7 +7,7 @@ with open("README.md") as f:
 
 setup(
     name="useless",
-    version="0.2.0",
+    version="0.9.0",
     description="Useless Library",
     long_description=long_description,
     author="ykm_kn",
