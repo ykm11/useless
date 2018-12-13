@@ -1,4 +1,9 @@
 
+def div_ceil(x, y):
+    return (x // y) + int(x % y != 0)
+
+def div_floor(x, y):
+    return (x // y)
 
 def gcd(m, n):
 
