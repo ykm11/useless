@@ -20,6 +20,12 @@ def le_8_num2bytes(x):
 def le_8_bytes2num(data):
     return struct.unpack("<Q", data)[0]
 
+def be_8_num2bytes(x):
+    return struct.pack(">Q", x)
+
+def be_8_bytes2num(data):
+    return struct.unpack(">Q", data)[0]
+
 
 def le_num2bytes(x):
     hex_x = hex(x)[2:]
