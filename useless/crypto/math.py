@@ -37,6 +37,18 @@ def extgcd(m, n):
     assert m0*s0 + n0*t0 == m
     return m, s0, t0
 
+def CRT(a1, a2, m1, m2):
+    """
+        x = a1 mod m1
+        x = a2 mod m2
+
+        input  : a1, a2, m1, m2
+        output : x
+    """
+    g, x, y = extgcd(m1, m2)
+    assert a1 % g == a2 % g
+    return (a2*m1*x + a1*m2*y) % (m1*m2//g)
+
 def modinv(x, m):
     g, s, t = extgcd(x, m)
     if g != 1:
@@ -76,4 +88,5 @@ def isqrt(n):
         return r
     else:
         return -1
+
 
